@@ -39,6 +39,11 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -53,5 +58,13 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>some message</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>some message</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>some message</string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>some message</string>
 </dict>
 </plist>
