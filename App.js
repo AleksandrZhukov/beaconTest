@@ -26,24 +26,25 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-NativeModules.RNBeaconMonitoring.startMonitoring({
+const RNBeaconMonitoring = NativeModules.RNBeaconMonitoring;
+RNBeaconMonitoring.startMonitoring({
   uuid: 'c60f33ee-2402-4af4-8b84-cdf1b1a26f87',
   major: 1,
   minor: 5,
 });
 
-const CounterEvents = new NativeEventEmitter(NativeModules.RNBeaconMonitoring);
+const CounterEvents = new NativeEventEmitter(RNBeaconMonitoring);
 
 CounterEvents.addListener('didDetermineState', async data => {
-  console.log('didDetermineState', data);
+  console.warn('didDetermineState', data);
 });
 
 CounterEvents.addListener('didEnter', async data => {
-  console.log('didEnter', data);
+  console.warn('didEnter', data);
 });
 
 CounterEvents.addListener('didExit', async data => {
-  console.log('didExit', data);
+  console.warn('didExit', data);
 });
 
 // NativeModules.RNBeaconMonitoring.stopMonitoring()

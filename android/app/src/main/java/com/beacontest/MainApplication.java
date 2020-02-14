@@ -2,6 +2,8 @@ package com.beacontest;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.beacontest.RNBeaconMonitoring.RNBeaconMonitoringPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          packages.add(new RNBeaconMonitoringPackage());
           return packages;
         }
 
